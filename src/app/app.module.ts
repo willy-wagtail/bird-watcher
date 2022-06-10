@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppLayoutModule } from './app-layout/app-layout.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { AppLayoutModule } from './app-layout/app-layout.module';
   ],
   imports: [
     BrowserModule,
-    AppLayoutModule,
+    LayoutModule,
     AppRoutingModule,
   ],
   providers: [],
