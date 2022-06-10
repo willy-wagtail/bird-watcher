@@ -5,15 +5,19 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'birdcams',
+    redirectTo: 'home',
   },
   {
-    path: 'birdcams',
-    loadChildren: () => import('./birdcams/birdcams.module').then(m => m.BirdcamsModule)
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: '404',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then(m => m.CameraModule)
   },
   {
     path: '**',
@@ -22,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
