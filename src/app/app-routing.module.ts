@@ -3,17 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'birdcams',
-    loadChildren: () => import('./birdcams/birdcams.module').then(m => m.BirdcamsModule)
-  },
-  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'birdcams',
   },
   {
+    path: 'birdcams',
+    loadChildren: () => import('./birdcams/birdcams.module').then(m => m.BirdcamsModule)
+  },
+  {
     path: '404',
-    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),
   },
   {
     path: '**',

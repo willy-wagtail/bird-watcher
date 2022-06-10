@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bird-watcher';
+  showAppHeader = false;
+  showAppSidebar = false;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd && this.activatedRoute.firstChild) {
+        this.showAppHeader = this.activatedRoute.firstChild.snapshot.data['showAppHeader'] !== false;
+        this.showAppSidebar = this.activatedRoute.firstChild.snapshot.data['showAppSidebar'] !== false;
+      }
+    });
+  }
 }
