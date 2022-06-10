@@ -1,1 +1,37 @@
-<p>sidebar works!</p>
+<nav class="flex-1 text-slate-600">
+    <a routerLink="/birdcams" routerLinkActive="active-link"
+        class="rounded flex items-center p-2 pl-4 hover:bg-blue-100/75">
+        <span class="mr-4">
+            <app-home-outline></app-home-outline>
+        </span>
+
+        Home
+    </a>
+
+
+    <section class="mt-4">
+        <h2 class="pl-4 pr-2 text-xs uppercase">Camera List</h2>
+
+        <ul>
+            <li>
+                <a href="#" class="rounded flex items-center p-2 pl-4 hover:bg-blue-100/75">
+                    <span class="mr-4">
+                        <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
+                    </span>
+
+                    Camera 1
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="#" class="rounded flex items-center  p-2 pl-4 hover:bg-blue-100/75">
+                    <span class="mr-4">
+                        <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
+                    </span>
+
+                    Camera 2
+                </a>
+            </li>
+        </ul>
+    </section>
+</nav>

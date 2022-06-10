@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent as HeaderComponent } from './header/header.component';
-import { SidebarComponent as SidebarComponent } from './sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { IconModule } from '../icon/icon.module';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { IconModule } from '../icon/icon.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     IconModule
   ],
   exports: [

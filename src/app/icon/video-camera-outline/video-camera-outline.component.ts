@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-video-camera-outline',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-camera-outline.component.scss']
 })
 export class VideoCameraOutlineComponent implements OnInit {
+
+  @Input() className: string = 'h-6 w-6';
 
   constructor() { }
 
