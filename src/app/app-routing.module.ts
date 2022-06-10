@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'camera',
-    loadChildren: () => import('./camera/camera.module').then(m => m.CameraModule)
+    loadChildren: () => import('./camera-page/camera-page.module').then(m => m.CameraPageModule)
   },
   {
     path: '**',

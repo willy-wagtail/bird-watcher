@@ -7,15 +7,15 @@ import { UserCircleOutlineComponent } from './user-circle-outline/user-circle-ou
 import { UserOutlineComponent } from './user-outline/user-outline.component';
 
 @NgModule({
+  imports: [
+    CommonModule
+  ],
   declarations: [
     VideoCameraOutlineComponent,
     HomeOutlineComponent,
     EyeOutlineComponent,
     UserCircleOutlineComponent,
     UserOutlineComponent,
-  ],
-  imports: [
-    CommonModule
   ],
   exports: [
     VideoCameraOutlineComponent,
