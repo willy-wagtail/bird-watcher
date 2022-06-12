@@ -1,34 +1,36 @@
-<div class="text-slate-600 pl-4 p-2 flex flex-row items-center">
-    <div class="mr-4">
-        <app-user-outline></app-user-outline>
-    </div>
+<a routerLink="/home"
+    class="rounded text-slate-600 flex flex-row justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
+    title="willywagtail">
+    <app-user-outline className="h-5 w-5 sm:h-6 sm:w-6"></app-user-outline>
 
-    <div>
+    <div class="ml-4 hidden sm:block">
         <h2 class="text-sm font-semibold">willywagtail</h2>
         <p class="text-xs">Administrator</p>
     </div>
-</div>
+</a>
 
-<nav class="mt-3 flex-1 text-slate-600">
+<nav class="sm:mt-3 grow text-slate-600">
     <a routerLink="/home" routerLinkActive="active-link"
-        class="rounded flex items-center p-2 pl-4 hover:bg-blue-100/75">
-        <span class="mr-4">
-            <app-home-outline className="w-5 h-5"></app-home-outline>
-        </span>
+        class="rounded flex justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
+        title="Home">
+        <app-home-outline className="w-5 h-5"></app-home-outline>
 
-        Home
+        <span class="sm:ml-4 hidden sm:inline">Home</span>
     </a>
 
-    <section class="mt-4">
-        <h2 class="pl-4 pr-2 text-xs uppercase">Camera List</h2>
+    <section class="mt-4 border-t sm:border-t-0">
+        <h2 class="hidden sm:block pl-4 pr-2 text-xs uppercase">
+            Camera List
+        </h2>
 
         <ul class="mt-2">
             <li *ngFor="let camera of cameras">
                 <a [routerLink]="'/camera/' + camera.id" routerLinkActive="active-link"
-                    class="rounded flex items-center p-2 pl-4 hover:bg-blue-100/75">
+                    class="rounded flex justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
+                    [title]="camera.name">
                     <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
 
-                    <span class="ml-4">
+                    <span class="sm:ml-4 hidden sm:inline">
                         {{camera.name}}
                     </span>
                 </a>

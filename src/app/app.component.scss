@@ -1,12 +1,8 @@
 :host {
-    @apply h-screen;
-
-    display: grid;
+    @apply h-screen grid grid-rows-[3rem_1fr] grid-cols-[4rem_1fr] sm:grid-cols-[14rem_1fr];
     grid-template-areas:
         'top top'
         'sidebar main';
-    grid-template-rows: 3rem 1fr;
-    grid-template-columns: 15rem 1fr;
 }
 
 .header {
@@ -14,11 +10,11 @@
 }
 
 .sidebar {
+    @apply min-h-full max-h-full overflow-auto;
     grid-area: sidebar;
 }
 
 .main {
     @apply min-h-full max-h-full overflow-auto;
-
     grid-area: main;
 }
