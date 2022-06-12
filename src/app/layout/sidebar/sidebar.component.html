@@ -23,25 +23,14 @@
         <h2 class="pl-4 pr-2 text-xs uppercase">Camera List</h2>
 
         <ul class="mt-2">
-            <li>
-                <a routerLink="/camera/1" routerLinkActive="active-link"
+            <li *ngFor="let camera of cameras">
+                <a [routerLink]="'/camera/' + camera.id" routerLinkActive="active-link"
                     class="rounded flex items-center p-2 pl-4 hover:bg-blue-100/75">
-                    <span class="mr-4">
-                        <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
+                    <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
+
+                    <span class="ml-4">
+                        {{camera.name}}
                     </span>
-
-                    Camera 1
-                </a>
-            </li>
-
-            <li>
-                <a routerLink="/camera/2" routerLinkActive="active-link"
-                    class="rounded flex items-center  p-2 pl-4 hover:bg-blue-100/75">
-                    <span class="mr-4">
-                        <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
-                    </span>
-
-                    Camera 2
                 </a>
             </li>
         </ul>

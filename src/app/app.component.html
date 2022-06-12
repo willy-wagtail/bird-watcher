@@ -1,9 +1,7 @@
-<app-header *ngIf="showHeader" class="basis-12"></app-header>
+<app-header class="header pl-6 pr-3 border-b" *ngIf="showHeader"></app-header>
 
-<main class="flex flex-row flex-1">
-    <app-sidebar *ngIf="showSidebar" class="basis-60 grow-0 shrink-0 border-r bg-slate-50"></app-sidebar>
+<app-sidebar *ngIf="showSidebar" class="sidebar px-2 py-4 border-r bg-slate-50"></app-sidebar>
 
-    <div class="flex-1 px-10 py-6">
-        <router-outlet></router-outlet>
-    </div>
+<main class="main px-10 py-6">
+    <router-outlet></router-outlet>
 </main>

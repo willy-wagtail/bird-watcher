@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  cameras: any[] = [
+    {id: 1, name: 'Camera 1'},
+    {id: 2, name: 'Camera 2'}
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
