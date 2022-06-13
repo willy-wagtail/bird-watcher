@@ -1,36 +1,36 @@
-<a routerLink="/home"
-    class="rounded text-slate-600 flex flex-row justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
-    title="willywagtail">
-    <app-user-outline className="h-5 w-5 sm:h-6 sm:w-6"></app-user-outline>
+<div class="hidden sm:flex flex-row items-stretch pl-3 sm:pl-4 text-slate-600">
+    <div class="flex items-center">
+        <app-user-outline></app-user-outline>
+    </div>
 
-    <div class="ml-4 hidden sm:block">
+    <div class="ml-4">
         <h2 class="text-sm font-semibold">willywagtail</h2>
         <p class="text-xs">Administrator</p>
     </div>
-</a>
+</div>
 
-<nav class="sm:mt-3 grow text-slate-600">
+<nav class="mt-12 sm:mt-4 grow text-slate-600">
     <a routerLink="/home" routerLinkActive="active-link"
         class="rounded flex justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
         title="Home">
         <app-home-outline className="w-5 h-5"></app-home-outline>
 
-        <span class="sm:ml-4 hidden sm:inline">Home</span>
+        <span class="hidden sm:inline sm:ml-4">Home</span>
     </a>
 
-    <section class="mt-4 border-t sm:border-t-0">
+    <section class="mt-4">
         <h2 class="hidden sm:block pl-4 pr-2 text-xs uppercase">
-            Camera List
+            <span class="whitespace-nowrap">Camera List</span>
         </h2>
 
-        <ul class="mt-2">
-            <li *ngFor="let camera of cameras">
+        <ul class="mt-4 sm:mt-2 border-t sm:border-t-0">
+            <li *ngFor="let camera of cameras" class="mt-2 sm:mt-0">
                 <a [routerLink]="'/camera/' + camera.id" routerLinkActive="active-link"
-                    class="rounded flex justify-center sm:justify-start items-center p-2 pl-3 sm:pl-4 hover:bg-blue-100/75"
+                    class="rounded flex justify-center sm:justify-start items-center p-2 pl-4 hover:bg-blue-100/75"
                     [title]="camera.name">
                     <app-video-camera-outline className="w-5 h-5"></app-video-camera-outline>
 
-                    <span class="sm:ml-4 hidden sm:inline">
+                    <span class="hidden sm:inline sm:ml-4">
                         {{camera.name}}
                     </span>
                 </a>

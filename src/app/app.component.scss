@@ -1,5 +1,5 @@
 :host {
-    @apply h-screen grid grid-rows-[3rem_1fr] grid-cols-[4rem_1fr] sm:grid-cols-[14rem_1fr];
+    @apply h-screen grid grid-rows-[3rem_1fr] grid-cols-[min-content_1fr] sm:grid-cols-[14rem_1fr];
     grid-template-areas:
         'top top'
         'sidebar main';
